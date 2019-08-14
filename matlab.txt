@@ -1,0 +1,109 @@
+>> syms x y
+>> diff(x^2+y^3,x)
+ 
+ans =
+ 
+2*x
+ 
+>> diff(x^2+y^3,x,2)
+ 
+ans =
+ 
+2
+ 
+>> subs(diff(x^2+y^3,x),x,2)
+ 
+ans =
+ 
+4
+ 
+>> solve(x^2+3*x+4)
+ 
+ans =
+ 
+ - (7^(1/2)*1i)/2 - 3/2
+   (7^(1/2)*1i)/2 - 3/2
+ 
+>> solve(x+y,x-y-5)
+
+ans = 
+
+  struct with fields:
+
+    x: [1×1 sym]
+    y: [1×1 sym]
+
+>> x
+ 
+x =
+ 
+x
+ 
+>> y
+ 
+y =
+ 
+y
+ 
+>> solve(x+y-20,x-y-5)
+
+ans = 
+
+  struct with fields:
+
+    x: [1×1 sym]
+    y: [1×1 sym]
+
+>> x
+ 
+x =
+ 
+x
+ 
+>> [a b]=solve(x+y-20,x-y-5)
+ 
+a =
+ 
+25/2
+ 
+ 
+b =
+ 
+15/2
+ 
+>> solve(x+y-20,x-y-5)
+
+ans = 
+
+  struct with fields:
+
+    x: [1×1 sym]
+    y: [1×1 sym]
+
+>> x(1)
+ 
+ans =
+ 
+x
+ 
+>> [a b c]=solve(x+y+z-20,x-z-y-5,2*x+y-z) 
+Undefined function or variable 'z'.
+ 
+>> syms x y z
+>> [a b c]=solve(x+y+z-20,x-z-y-5,2*x+y-z)
+ 
+a =
+ 
+25/2
+ 
+ 
+b =
+ 
+-35/4
+ 
+ 
+c =
+ 
+65/4
+ 
+>> 
